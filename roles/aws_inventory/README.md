@@ -87,6 +87,7 @@ Author Information
 ------------------
 
 V. Elisseev
+S. Lubbers
 
 Data structure examples
 -----------------------
