@@ -29,7 +29,7 @@
   add_host:
     hostname: "{{ item.tags.Name }}"
 
-    ansible_host: "{{ item.public_ip_address if item.state.name == 'running' else '127.0.30.1' }}"
+    ansible_host: "{{ item[return_address_for_ansible_host] if item.state.name == 'running' else '127.0.30.1' }}"
     ansible_ssh_private_key_file: "{{ aws_tmp_key }}"
     ansible_become_password: "{{ aws_inventory_ansible_user_password }}"
     ansible_user: "{{ 'sap_admin' if os_platform == 'windows' else aws_tmp_user }}"
