@@ -1,4 +1,6 @@
 # Ansible Collection - community.runsap
 
-Documentation for the collection.
+This collection provides roles that are needed to implement the 
+runsap methology.
+
 
