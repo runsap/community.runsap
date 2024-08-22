@@ -3,6 +3,15 @@
 This collection provides roles that are needed to implement the 
 runsap methology.
 
+# Capabilities
+
+De collectie bevat op dit moment de volgende rollen:
+
+- aws_ami
+- sap_inventory
+- aws_inventory
+- aws_backint
+
 # Ontwikkelen
 
 ## Nieuwe rol toevoegen

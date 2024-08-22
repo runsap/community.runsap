@@ -1,0 +1,15 @@
+- name: Include playbook to construct the ec2hosts AWS inventory
+  ansible.builtin.import_playbook: construct-inventory-aws-running.yml
+
+- hosts: ec2hosts
+  gather_facts: True
+  become: True
+  roles:
+    - role: community.runsap.aws_backint
+      vars:
+        sap_aws_backint_version: 2.0.3.755
+      when:
+        - "'hdb' in host_data.ec2.tags.Sap_type"
+
+- name: Show custom summary
+  ansible.builtin.import_playbook: show-custom-summary.yml
