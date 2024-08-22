@@ -1,0 +1,14 @@
+---
+- name: Create the ec2host inventory with running instances
+  hosts: localhost
+  gather_facts: False
+  become: False
+  vars_files:
+    - vault.yml  
+  roles:
+    - role: community.runsap.sap_inventory # sap-inventory
+    - role: community.runsap.aws_inventory # xxx-aws-inventory
+      vars:
+        aws_inventory_filters:
+          instance-state-name: ["running"]  
+          "tag:Ansible_managed": "True"

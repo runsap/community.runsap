@@ -5,11 +5,12 @@ runsap methology.
 
 # Capabilities
 
-De collectie kan op dit moment:
+De collectie bevat op dit moment de volgende rollen:
 
 - aws_ami
 - sap_inventory
 - aws_inventory
+- aws_backint
 
 # Ontwikkelen
 
