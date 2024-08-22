@@ -14,3 +14,6 @@ aws_inventory_ansible_user: sap-aws-ansible
 
 # Default ansible connection method
 ansible_connection: ssh
+
+# Default value of the address to return
+return_address_for_ansible_host: public_ip_address
