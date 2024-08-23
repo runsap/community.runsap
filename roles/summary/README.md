@@ -1,37 +1,48 @@
-Role Name
+summary
 =========
 
-A brief description of the role goes here.
+This role will create a custom summary informing the end user in --check mode.
 
 Requirements
 ------------
+This summary is part of the runsap methology which means that all code must be idempotent. In check mode the code must always explain to the user what will be done.
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
-
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+During play or role execution you can set a variable:
+```
+- set_fact:
+    custom_change_summary: "{{ custom_change_summary | default([]) + [ 'Lets execute some super stuff' ] }}"
+```
 
 Example Playbook
 ----------------
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
+```
       - name: Running Summary Play
-        hosts: localhost
-        gather_facts: false
-        vars_files:
-          - vault.yml  
+        hosts: localhost 
         tasks:
           - include_role: 
               name: community.runsap.summary
             when: ansible_check_mode
+```
+
+This will result in:
+
+```
+ok: [localhost] => 
+  msg: |-
+    --------------------------------------------------
+    RUNSAP CHANGE SUMMARY
+    --------------------------------------------------  
+    -   hostname: saps4x1
+        samenvatting:
+        - AWS Backint Agent 2.0.3.755 needs to be installed
+```
 
 License
 -------
