@@ -18,7 +18,7 @@ The `host_data` dict will have the following structure
 { "host_data": {
       "ec2": {
           "availability_zone": "eu-central-1a",
-          "domain": "sap.bk-eu-central2.dqs.booking.com",
+          "domain": "sap.bk-eu-central2.dqs.company.com",
           "image_id": "ami-0fc46135fc3a40134",
           "tags": {
               "Ansible_managed": true,
@@ -123,7 +123,7 @@ Data structure examples
     "aws_places": {
         "dr1": {
             "availability_zone": "eu-central-1a",
-            "domain": "presap.bk-eu-central2.dqs.booking.com",
+            "domain": "presap.bk-eu-central2.dqs.company.com",
             "region": "eu-central-1",
             "security_group": "sg-0a86b532994e66488",
             "subnet_id": "subnet-09d9522406607e679",
@@ -312,7 +312,7 @@ Data structure examples
         "tags": {
             "Ansible_managed": "True",
             "Env": "dev",
-            "Fqdn": "sap-ztscs18a1.presap.bk-eu-west7.dqs.booking.com",
+            "Fqdn": "sap-ztscs18a1.presap.bk-eu-west7.dqs.company.com",
             "Gid": "zts",
             "Name": "sap-ztscs18a1",
             "Patch Group": "dev",
@@ -330,7 +330,7 @@ Data structure examples
             "Sap_sid": "ZTS",
             "Sap_type": "abap",
             "Sap_version": "NW752",
-            "Sap_virtual_ascs_name": "zts-cs.sap.booking.com",
+            "Sap_virtual_ascs_name": "zts-cs.sap.company.com",
             "Sox": "False"
         },
         "usage_operation": "RunInstances:0010",

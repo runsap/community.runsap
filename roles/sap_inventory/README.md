@@ -9,7 +9,7 @@ aws:
   hosts:
     - ec2:
         availability_zone: eu-central-1a
-        domain: sap.bk-eu-central2.dqs.booking.com
+        domain: sap.bk-eu-central2.dqs.company.com
         ebs_optimized: true
         image_id: ami-00e9db6661b279d3f
         instance_type: m5.large
