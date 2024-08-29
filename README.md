@@ -5,20 +5,26 @@ runsap methology.
 
 # Capabilities
 
-De collectie bevat op dit moment de volgende rollen:
+The collection holds the following roles:
 
 - aws_ami
 - sap_inventory
 - aws_inventory
 - aws_backint
+- summary
 
-# Ontwikkelen
+And the following module:
 
-## Nieuwe rol toevoegen
+- play_status
+
+
+# Develop
+
+## Add a new role to the collection
 
 `ansible-galaxy role init roles/new_role`
 
-## Commit messages
+## Use commit messages
 
 **Nieuwe Functie** 
 
